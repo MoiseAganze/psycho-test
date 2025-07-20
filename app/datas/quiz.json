@@ -1,0 +1,369 @@
+{
+  "quizTitle": "Est-ce que tu penses comme tout le monde ?",
+  "quizDescription": "8 questions pour explorer la cognition humaine + 5 questions bonus sur la cognition sociale. Data destinées à l'analyse des schémas mentaux.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Un train fonce vers 5 personnes. Vous pouvez actionner un levier pour le dévier sur une voie où il tuera 1 personne. Que faites-vous ?",
+      "options": [
+        {
+          "text": "J’actionne le levier, sauver 5 vies justifie la perte d’1 vie",
+          "value": "utilitarisme"
+        },
+        {
+          "text": "Je n’interviens pas, ce n’est pas à moi de décider qui meurt",
+          "value": "deontologie"
+        },
+        {
+          "text": "Je cherche une troisième solution (ex: courir avertir les gens)",
+          "value": "creativite"
+        },
+        {
+          "text": "Je ne sais pas, c’est trop complexe émotionnellement",
+          "value": "evitement_emotionnel"
+        },
+        {
+          "text": "Je refuse de répondre, la question est trop extrême",
+          "value": "rejet_cadre"
+        }
+      ],
+      "tags": ["moral", "decision"],
+      "analysis": "Mesure l’utilitarisme vs. la déontologie, l’évitement de l’action, ou la pensée créative."
+    },
+    {
+      "id": 2,
+      "question": "Vous avez un week-end de libre. Vous préférez :",
+      "options": [
+        {
+          "text": "Passer du temps avec des amis/proches (énergie sociale)",
+          "value": "extroversion"
+        },
+        {
+          "text": "Rester seul(e) pour vous recharger (énergie solitaire)",
+          "value": "introversion"
+        },
+        {
+          "text": "Un mix : peu de social mais avec des personnes choisies",
+          "value": "ambiversion"
+        },
+        {
+          "text": "Cela dépend de mon humeur (instabilité décisionnelle)",
+          "value": "flexibilite"
+        },
+        {
+          "text": "Je planifie une activité solo productive (ex: lecture, sport)",
+          "value": "autonomie"
+        }
+      ],
+      "tags": ["personnalite", "social"],
+      "analysis": "Introversion/extroversion, flexibilité cognitive, besoin de contrôle."
+    },
+    {
+      "id": 3,
+      "question": "On vous propose un pari : 50% de chance de gagner 1000€, 50% de perdre 500€. Vous :",
+      "options": [
+        {
+          "text": "Acceptez sans hésiter (appétence pour le risque)",
+          "value": "risque"
+        },
+        {
+          "text": "Refusez, la perte potentielle vous stresse (aversion au risque)",
+          "value": "prudence"
+        },
+        {
+          "text": "Vous calculez l’espérance de gain (500€ - 250€ = +250€, donc oui)",
+          "value": "rationnel"
+        },
+        {
+          "text": "Vous acceptez seulement si vous pouvez vous permettre de perdre",
+          "value": "conditionnel"
+        },
+        {
+          "text": "Vous demandez plus d’informations (besoin de contrôle)",
+          "value": "controle"
+        }
+      ],
+      "tags": ["risque", "decision"],
+      "analysis": "Biais cognitifs, calcul rationnel vs. émotionnel."
+    },
+    {
+      "id": 4,
+      "question": "Un collègue semble contrarié mais dit 'ça va'. Vous :",
+      "options": [
+        {
+          "text": "Insistez pour qu’il s’ouvre (empathie active)",
+          "value": "empathie_active"
+        },
+        {
+          "text": "Respectez son silence mais montrez votre disponibilité",
+          "value": "empathie_passive"
+        },
+        {
+          "text": "L’ignorez, s’il voulait parler, il le dirait (littéralisme)",
+          "value": "neutralite"
+        },
+        {
+          "text": "Agissez indirectement (ex: lui offrir un café)",
+          "value": "action_indirecte"
+        },
+        {
+          "text": "Vous sentez mal à l’aise et évitez la situation",
+          "value": "evitement"
+        }
+      ],
+      "tags": ["empathie", "social"],
+      "analysis": "Empathie, théorie de l’esprit, gestion de l’inconfort."
+    },
+    {
+      "id": 5,
+      "question": "Vous recevez 1000€. Vous préférez :",
+      "options": [
+        {
+          "text": "Les dépenser maintenant pour un plaisir immédiat",
+          "value": "instantane"
+        },
+        {
+          "text": "Les économiser pour un projet futur (retard de gratification)",
+          "value": "futur"
+        },
+        {
+          "text": "En dépenser une partie et investir le reste",
+          "value": "mixte"
+        },
+        { "text": "Les donner à une cause (altruisme)", "value": "altruisme" },
+        {
+          "text": "Attendre de voir un besoin précis (évitement de décision)",
+          "value": "attente"
+        }
+      ],
+      "tags": ["argent", "decision"],
+      "analysis": "Patience, impulsivité, altruisme, peur de l’engagement."
+    },
+    {
+      "id": 6,
+      "question": "Un ami réussit mieux que vous dans un domaine important pour vous. Vous :",
+      "options": [
+        {
+          "text": "Le félicitez sincèrement (joie authentique)",
+          "value": "joie_authentique"
+        },
+        {
+          "text": "Vous comparez et vous sentez inférieur(e) (jalousie)",
+          "value": "jalousie"
+        },
+        {
+          "text": "Vous motivez pour progresser (compétition saine)",
+          "value": "motivation"
+        },
+        {
+          "text": "Vous dites 'Tant mieux pour lui' mais intérieurement frustré(e)",
+          "value": "frustration_cachee"
+        },
+        {
+          "text": "Vous remettez en question votre propre valeur",
+          "value": "doute_soi"
+        }
+      ],
+      "tags": ["social", "emotion"],
+      "analysis": "Estime de soi, gestion de la jalousie, mindset fixe vs. growth."
+    },
+    {
+      "id": 7,
+      "question": "'Un arbre tombe dans une forêt sans témoin. Fait-il du bruit ?'",
+      "options": [
+        {
+          "text": "Oui, le bruit est physique, pas besoin d’auditeur (réalisme)",
+          "value": "realisme"
+        },
+        {
+          "text": "Non, le son nécessite une perception (idéalisme)",
+          "value": "idealisme"
+        },
+        {
+          "text": "La question est un piège sémantique (rejet du cadre)",
+          "value": "rejet_cadre"
+        },
+        {
+          "text": "Je n’ai pas d’avis, c’est trop théorique",
+          "value": "neutralite"
+        },
+        {
+          "text": "Cela dépend de la définition de 'bruit'",
+          "value": "relativisme"
+        }
+      ],
+      "tags": ["philosophie", "abstraction"],
+      "analysis": "Pensée concrète vs. abstraite, tolérance à l’ambiguïté."
+    },
+    {
+      "id": 8,
+      "question": "Une IA doit choisir entre sauver un enfant ou 3 adultes. Vous :",
+      "options": [
+        {
+          "text": "Programmez l’IA pour minimiser les morts (utilitarisme)",
+          "value": "utilitarisme"
+        },
+        {
+          "text": "Interdisez ce type de choix à l’IA (refus de délégation morale)",
+          "value": "controle_ethique"
+        },
+        {
+          "text": "L’IA doit prioriser les enfants (valeur affective)",
+          "value": "biais_affectif"
+        },
+        {
+          "text": "Vous demandez l’avis d’un comité éthique (externalisation)",
+          "value": "externalisation"
+        },
+        {
+          "text": "C’est impossible, l’IA ne devrait pas conduire (technophobie)",
+          "value": "rejet_tech"
+        }
+      ],
+      "tags": ["ethique", "technologie"],
+      "analysis": "Confiance dans la tech, biais humains projetés sur les machines."
+    },
+    {
+      "id": 9,
+      "question": "Un ami répond sèchement à un message. Vous pensez :",
+      "options": [
+        {
+          "text": "Il est fâché contre moi (internalisation)",
+          "value": "internalisation"
+        },
+        {
+          "text": "Il a sûrement eu une mauvaise journée (externalisation)",
+          "value": "externalisation"
+        },
+        {
+          "text": "Je relis mon message pour voir si j’ai été maladroit (auto-analyse)",
+          "value": "auto_analyse"
+        },
+        {
+          "text": "Je lui demande directement s’il va bien (communication assertive)",
+          "value": "assertivite"
+        },
+        {
+          "text": "J’ignore ça, trop de variables pour spéculer (évitement)",
+          "value": "evitement"
+        }
+      ],
+      "tags": ["cognition_sociale", "communication"],
+      "analysis": "Attribution causale, anxiété sociale, besoin de clarté."
+    },
+    {
+      "id": 10,
+      "question": "Dans un groupe, tout le monde rit d’une blague que vous ne trouvez pas drôle. Vous :",
+      "options": [
+        {
+          "text": "Vous forcez à rire pour vous intégrer (conformité)",
+          "value": "conformite"
+        },
+        {
+          "text": "Restez neutre, sans mentir (authenticité modérée)",
+          "value": "authenticite"
+        },
+        {
+          "text": "Dites ouvertement que vous ne comprenez pas (non-conformité)",
+          "value": "non_conformite"
+        },
+        {
+          "text": "Attendez de voir si d’autres osent ne pas rire (recherche d’alliés)",
+          "value": "recherche_allies"
+        },
+        {
+          "text": "Analysez pourquoi les autres rient (curiosité sociale)",
+          "value": "curiosite"
+        }
+      ],
+      "tags": ["cognition_sociale", "groupe"],
+      "analysis": "Pression sociale, autonomie cognitive, sensibilité au rejet."
+    },
+    {
+      "id": 11,
+      "question": "Un inconnu pleure dans les transports. Vous :",
+      "options": [
+        {
+          "text": "Lui demandez s’il a besoin d’aide (empathie active)",
+          "value": "empathie_active"
+        },
+        {
+          "text": "Échangez un regard compatissant mais n’intervenez pas (empathie passive)",
+          "value": "empathie_passive"
+        },
+        {
+          "text": "Vous éloignez, mal à l’aise (évitement émotionnel)",
+          "value": "evitement"
+        },
+        {
+          "text": "Vous dites 'Ça va aller' sans engagement (réconfort superficiel)",
+          "value": "reconfort_superficiel"
+        },
+        {
+          "text": "Vous imaginez ce qui a pu lui arriver (mentalisation)",
+          "value": "mentalisation"
+        }
+      ],
+      "tags": ["cognition_sociale", "empathie"],
+      "analysis": "Empathie spontanée vs. inhibition sociale, tolérance aux émotions d’autrui."
+    },
+    {
+      "id": 12,
+      "question": "Un collègue que vous n’aimez pas reçoit une promotion. Vous :",
+      "options": [
+        {
+          "text": "Vous dites qu’il la mérite (objectivité)",
+          "value": "objectivite"
+        },
+        {
+          "text": "Vous questionnez secrètement la décision (biais de confirmation)",
+          "value": "biais_confirmation"
+        },
+        {
+          "text": "Vous vous comparez en cherchant des injustices (ressentiment)",
+          "value": "ressentiment"
+        },
+        {
+          "text": "Vous félicitez poliment mais sans conviction (hypocrisie sociale)",
+          "value": "hypocrisie"
+        },
+        {
+          "text": "Vous demandez des feedbacks pour progresser (auto-amélioration)",
+          "value": "auto_amelioration"
+        }
+      ],
+      "tags": ["cognition_sociale", "biais"],
+      "analysis": "Biais de partialité, gestion de l’envie, rationalisation."
+    },
+    {
+      "id": 13,
+      "question": "À un dîner, un invité mange avec les mains alors que tout le monde utilise des couverts. Vous :",
+      "options": [
+        { "text": "L’ignorez (tolérance passive)", "value": "tolerance" },
+        {
+          "text": "Suivez son exemple pour qu’il ne se sente pas seul (alignement)",
+          "value": "alignement"
+        },
+        {
+          "text": "Échangez un regard gêné avec d’autres (validation sociale)",
+          "value": "validation_sociale"
+        },
+        {
+          "text": "Vous demandez s’il y a une raison culturelle (curiosité bienveillante)",
+          "value": "curiosite"
+        },
+        {
+          "text": "Vous sentez irrité(e) par le non-respect des règles (rigidité normative)",
+          "value": "rigidite"
+        }
+      ],
+      "tags": ["cognition_sociale", "normes"],
+      "analysis": "Sensibilité aux normes, flexibilité culturelle, besoin d’ordre."
+    }
+  ],
+  "config": {
+    "shuffleQuestions": false,
+    "allowSkipping": true,
+    "showAnalysisAtEnd": true
+  }
+}
