@@ -9,7 +9,7 @@ import { saveUser, userExist } from "../server_actions/saveUser";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function QuizComponent() {
-  const [currentStep, setCurrentStep] = useState<"email" | "quiz">("email");
+  const [currentStep, setCurrentStep] = useState<"email" | "quiz">("quiz");
   const [email, setEmail] = useState("");
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -82,33 +82,37 @@ export default function QuizComponent() {
     if (isAnimating) return;
     setIsAnimating(true);
 
+    // Créer la nouvelle réponse immédiatement
+    const newAnswer = {
+      questionId: String(quizData.questions[currentQuestionIndex].id),
+      question: quizData.questions[currentQuestionIndex].question,
+      reponseIndex: answer_index,
+      reponse_text: answer_text,
+      reponse_value: answer_value,
+    };
+
     setTimeout(async () => {
+      const updatedResult = {
+        ...result,
+        questions: [...result.questions, newAnswer],
+      };
+
       if (currentQuestionIndex < quizData.questions.length - 1) {
         setCurrentQuestionIndex((prev) => prev + 1);
-
         setIsAnimating(false);
-        setResult((prev) => ({
-          ...prev,
-          questions: [
-            ...prev.questions,
-            {
-              questionId: String(quizData.questions[currentQuestionIndex].id),
-              question: quizData.questions[currentQuestionIndex].question,
-              reponseIndex: answer_index,
-              reponse_text: answer_text,
-              reponse_value: answer_value,
-            },
-          ],
-        }));
         setSelectedAnswer(null);
+        setResult(updatedResult);
       } else {
-        const user_token = localStorage.getItem("kentoqwertyuiop");
-        const good = await saveUser(result, user_token, email);
-        if (good) {
-          router.push(`/results?email=${encodeURIComponent(email)}`);
-        } else {
-          toast.error("Une erreur est survenue lors de l'enregistrement");
-        }
+        setResult(updatedResult);
+        console.log(updatedResult);
+
+        // const user_token = localStorage.getItem("kentoqwertyuiop");
+        // const good = await saveUser(updatedResult, user_token, email);
+        // if (good) {
+        //   router.push(`/results?email=${encodeURIComponent(email)}`);
+        // } else {
+        //   toast.error("Une erreur est survenue lors de l'enregistrement");
+        // }
       }
     }, 800);
   };
