@@ -106,13 +106,13 @@ export default function QuizComponent() {
         setResult(updatedResult);
         console.log(updatedResult);
 
-        // const user_token = localStorage.getItem("kentoqwertyuiop");
-        // const good = await saveUser(updatedResult, user_token, email);
-        // if (good) {
-        //   router.push(`/results?email=${encodeURIComponent(email)}`);
-        // } else {
-        //   toast.error("Une erreur est survenue lors de l'enregistrement");
-        // }
+        const user_token = localStorage.getItem("kentoqwertyuiop");
+        const good = await saveUser(updatedResult, user_token, email);
+        if (good) {
+          router.push(`/results?email=${encodeURIComponent(email)}`);
+        } else {
+          toast.error("Une erreur est survenue lors de l'enregistrement");
+        }
       }
     }, 800);
   };
