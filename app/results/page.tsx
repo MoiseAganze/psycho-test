@@ -16,11 +16,21 @@ const Page = () => {
   }>({});
   const [loading, setLoading] = useState(true);
 
-  const searchParams = useSearchParams();
-  const email = searchParams.get("email");
+  // Récupère l'email depuis l'URL (côté client)
+  const getEmailFromUrl = () => {
+    if (typeof window === "undefined") return null;
+    const params = new URLSearchParams(window.location.search);
+    return params.get("email");
+  };
+
+  const [email, setEmail] = useState<string | null>(null);
 
   // Ajout d'un état pour le nombre de participants
   const [participants, setParticipants] = useState(0);
+
+  useEffect(() => {
+    setEmail(getEmailFromUrl());
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
