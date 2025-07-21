@@ -9,7 +9,7 @@ import { saveUser, userExist } from "../server_actions/saveUser";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function QuizComponent() {
-  const [currentStep, setCurrentStep] = useState<"email" | "quiz">("quiz");
+  const [currentStep, setCurrentStep] = useState<"email" | "quiz">("email");
   const [email, setEmail] = useState("");
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
