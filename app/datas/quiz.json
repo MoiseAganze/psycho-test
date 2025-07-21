@@ -61,7 +61,7 @@
     },
     {
       "id": 3,
-      "question": "On vous propose un pari : 50% de chance de gagner 1000€, 50% de perdre 500€. Vous :",
+      "question": "On vous propose un pari : 50% de chance de gagner 1000$, 50% de perdre 500$. Vous :",
       "options": [
         {
           "text": "Acceptez sans hésiter (appétence pour le risque)",
@@ -72,7 +72,7 @@
           "value": "prudence"
         },
         {
-          "text": "Vous calculez l’espérance de gain (500€ - 250€ = +250€, donc oui)",
+          "text": "Vous calculez l’espérance de gain (500$ - 250$ = +250$, donc oui)",
           "value": "rationnel"
         },
         {
@@ -117,7 +117,7 @@
     },
     {
       "id": 5,
-      "question": "Vous recevez 1000€. Vous préférez :",
+      "question": "Vous recevez 1000$. Vous préférez :",
       "options": [
         {
           "text": "Les dépenser maintenant pour un plaisir immédiat",
