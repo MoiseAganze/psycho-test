@@ -335,31 +335,6 @@
       ],
       "tags": ["cognition_sociale", "biais"],
       "analysis": "Biais de partialité, gestion de l’envie, rationalisation."
-    },
-    {
-      "id": 13,
-      "question": "À un dîner, un invité mange avec les mains alors que tout le monde utilise des couverts. Vous :",
-      "options": [
-        { "text": "L’ignorez (tolérance passive)", "value": "tolerance" },
-        {
-          "text": "Suivez son exemple pour qu’il ne se sente pas seul (alignement)",
-          "value": "alignement"
-        },
-        {
-          "text": "Échangez un regard gêné avec d’autres (validation sociale)",
-          "value": "validation_sociale"
-        },
-        {
-          "text": "Vous demandez s’il y a une raison culturelle (curiosité bienveillante)",
-          "value": "curiosite"
-        },
-        {
-          "text": "Vous sentez irrité(e) par le non-respect des règles (rigidité normative)",
-          "value": "rigidite"
-        }
-      ],
-      "tags": ["cognition_sociale", "normes"],
-      "analysis": "Sensibilité aux normes, flexibilité culturelle, besoin d’ordre."
     }
   ],
   "config": {
