@@ -24,8 +24,6 @@ const Page = () => {
   };
 
   const [email, setEmail] = useState<string | null>(null);
-
-  // Ajout d'un état pour le nombre de participants
   const [participants, setParticipants] = useState(0);
 
   useEffect(() => {
@@ -40,13 +38,11 @@ const Page = () => {
       }
       const results = await getUsers();
       setData(results);
-      setParticipants(results ? results.length : 0); // Met à jour le nombre de participants
+      setParticipants(results ? results.length : 0);
 
       const currentUser = await getUserData(email);
       if (currentUser && results && results.length > 0) {
         setUserResponses(currentUser.quiz_results.questions);
-
-        // Calculer les correspondances avec les autres utilisateurs
         calculateMatches(currentUser, results);
       }
       setLoading(false);
@@ -115,7 +111,6 @@ const Page = () => {
     );
   }
 
-  // Affiche un message si moins de 50 participants
   if (participants < 30) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
@@ -140,35 +135,27 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        {/* <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-4 animate-pulse">
-            Est-ce que tu penses comme tout le monde ?
-          </h1>
-          <p className="text-xl text-secondary">
-            Découvre à quel point tes réponses correspondent aux autres
-            participants
-          </p>
-        </div> */}
-
         {/* Overall Match */}
         <div className="card bg-base-100 shadow-xl mb-12 transform transition-all hover:scale-105">
           <div className="card-body items-center text-center">
             <h2 className="card-title text-3xl mb-6">
               À quel point tu penses comme les autres ?
             </h2>
-            <div className="relative w-64 h-64 mb-6">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 mb-6">
               <div
                 className="radial-progress text-primary border-4 border-primary/10"
                 style={
                   {
                     "--value": getOverallMatch(),
-                    "--size": "16rem",
-                    "--thickness": "1rem",
+                    "--size": "12rem",
+                    // "--thickness": "1rem",
+                    "--thickness": "0.75rem",
                   } as React.CSSProperties
                 }
               >
-                <span className="text-5xl font-bold">{getOverallMatch()}%</span>
+                <span className="text-4xl sm:text-5xl font-bold">
+                  {getOverallMatch()}%
+                </span>
               </div>
             </div>
             <div className="text-lg">
@@ -200,9 +187,9 @@ const Page = () => {
                   Ta réponse: {question.reponse_text}
                 </p>
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div
-                    className="radial-progress text-accent"
+                    className="radial-progress text-accent min-w-[6rem]"
                     style={
                       {
                         "--value": getMatchPercentage(question.questionId),
@@ -216,7 +203,7 @@ const Page = () => {
                     </span>
                   </div>
 
-                  <div>
+                  <div className="text-center sm:text-left">
                     <p className="text-sm">
                       <span className="font-bold">
                         {comparisonData[question.questionId]?.match || 0}
