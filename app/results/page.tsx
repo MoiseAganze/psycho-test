@@ -116,7 +116,7 @@ const Page = () => {
   }
 
   // Affiche un message si moins de 50 participants
-  if (participants < 50) {
+  if (participants < 30) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
         <div className="card bg-base-100 shadow-xl p-8 text-center">
