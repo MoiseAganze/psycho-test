@@ -25,6 +25,7 @@ const Page = () => {
 
   const [email, setEmail] = useState<string | null>(null);
   const [participants, setParticipants] = useState(0);
+  const [virginPercentage, setVirginPercentage] = useState(0);
 
   useEffect(() => {
     setEmail(getEmailFromUrl());
@@ -44,6 +45,7 @@ const Page = () => {
       if (currentUser && results && results.length > 0) {
         setUserResponses(currentUser.quiz_results.questions);
         calculateMatches(currentUser, results);
+        calculateVirginPercentage(results);
       }
       setLoading(false);
     };
@@ -103,6 +105,35 @@ const Page = () => {
     return Math.round((totalMatch / totalQuestions) * 100);
   };
 
+  const calculateVirginPercentage = (allUsers: responseData[]) => {
+    if (!allUsers || allUsers.length === 0) return;
+
+    // Question 3: "Avez-vous déjà eu une expérience sexuelle complète ?"
+    // L'option "Non, je suis encore vierge" a l'index 0
+    const question3Id = "3";
+    let virginCount = 0;
+    let totalResponses = 0;
+
+    allUsers.forEach((user) => {
+      const question3 = user.quiz_results.questions.find(
+        (q) => q.questionId === question3Id
+      );
+
+      if (question3) {
+        totalResponses++;
+        // reponseIndex 0 correspond à "Non, je suis encore vierge"
+        if (question3.reponseIndex === 0) {
+          virginCount++;
+        }
+      }
+    });
+
+    const percentage =
+      totalResponses > 0 ? Math.round((virginCount / totalResponses) * 100) : 0;
+
+    setVirginPercentage(percentage);
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-base-200">
@@ -111,7 +142,7 @@ const Page = () => {
     );
   }
 
-  if (participants < 30) {
+  if (participants < 50) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
         <div className="card bg-base-100 shadow-xl p-8 text-center">
@@ -123,8 +154,8 @@ const Page = () => {
             <span className="font-bold">50 participants</span>.
           </p>
           <p className="mb-4">
-            Reviens dans 24h pour découvrir à quel point tu penses comme les
-            autres&nbsp;!
+            Reviens dans 24h pour découvrir qui est encore vierge à
+            Kinshasa&nbsp;!
           </p>
           <span className="text-4xl">⏳</span>
         </div>
@@ -135,11 +166,36 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
+        {/* Statistique globale - Virginité à Kinshasa */}
+        <div className="card bg-gradient-to-br from-primary to-secondary text-primary-content shadow-xl mb-8 transform transition-all hover:scale-[1.02]">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title text-2xl sm:text-3xl mb-4">
+              📊 Statistique Kinshasa
+            </h2>
+            <div className="stats stats-vertical sm:stats-horizontal shadow bg-base-100 text-base-content">
+              <div className="stat place-items-center">
+                <div className="stat-title">Personnes encore vierges</div>
+                <div className="stat-value text-primary">
+                  {virginPercentage}%
+                </div>
+                <div className="stat-desc">Sur {participants} participants</div>
+              </div>
+              <div className="stat place-items-center">
+                <div className="stat-title">Ont déjà eu des expériences</div>
+                <div className="stat-value text-secondary">
+                  {100 - virginPercentage}%
+                </div>
+                <div className="stat-desc">Sur {participants} participants</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Overall Match */}
         <div className="card bg-base-100 shadow-xl mb-12 transform transition-all hover:scale-105">
           <div className="card-body items-center text-center">
             <h2 className="card-title text-3xl mb-6">
-              À quel point tu penses comme les autres ?
+              Tes réponses comparées aux autres kinois
             </h2>
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 mb-6">
               <div
@@ -161,14 +217,16 @@ const Page = () => {
             <div className="text-lg">
               {getOverallMatch() > 70 ? (
                 <p className="text-success">
-                  Tu penses comme la majorité des gens !
+                  Tes réponses correspondent à la majorité des kinois !
                 </p>
               ) : getOverallMatch() > 40 ? (
                 <p className="text-warning">
-                  Tu as une pensée assez commune mais avec des particularités
+                  Tes expériences et perceptions sont assez partagées
                 </p>
               ) : (
-                <p className="text-error">Tu as une pensée vraiment unique !</p>
+                <p className="text-error">
+                  Tes réponses sont vraiment uniques !
+                </p>
               )}
             </div>
           </div>
@@ -227,7 +285,7 @@ const Page = () => {
         {/* Footer */}
         <div className="text-center mt-12 pt-6 border-t border-base-300">
           <p className="text-sm opacity-75">
-            Merci d'avoir participé à notre quiz philosophique !
+            Merci d'avoir partagé ton expérience de manière anonyme !
           </p>
         </div>
       </div>

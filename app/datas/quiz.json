@@ -1,340 +1,343 @@
 {
-  "id": "quiz_001",
-  "quizTitle": "Est-ce que tu penses comme tout le monde ?",
-  "quizDescription": "8 questions pour explorer la cognition humaine + 5 questions bonus sur la cognition sociale. Data destinées à l'analyse des schémas mentaux.",
+  "id": "quiz_002",
+  "quizTitle": "Qui est encore vierge à Kinshasa ?",
+  "quizDescription": "8 questions pour explorer les expériences et attitudes intimes + 4 questions bonus sur les influences sociales. Données destinées à l'analyse des tendances culturelles et personnelles à Kinshasa.",
   "questions": [
     {
       "id": 1,
-      "question": "Un train fonce vers 5 personnes. Vous pouvez actionner un levier pour le dévier sur une voie où il tuera 1 personne. Que faites-vous ?",
+      "question": "Quel est votre âge approximatif ?",
       "options": [
         {
-          "text": "J’actionne le levier, sauver 5 vies justifie la perte d’1 vie",
-          "value": "utilitarisme"
+          "text": "Moins de 18 ans",
+          "value": "jeune"
         },
         {
-          "text": "Je n’interviens pas, ce n’est pas à moi de décider qui meurt",
-          "value": "deontologie"
+          "text": "18-24 ans",
+          "value": "jeune_adulte"
         },
         {
-          "text": "Je cherche une troisième solution (ex: courir avertir les gens)",
-          "value": "creativite"
+          "text": "25-34 ans",
+          "value": "adulte_jeune"
         },
         {
-          "text": "Je ne sais pas, c’est trop complexe émotionnellement",
-          "value": "evitement_emotionnel"
+          "text": "35 ans ou plus",
+          "value": "adulte"
         },
         {
-          "text": "Je refuse de répondre, la question est trop extrême",
-          "value": "rejet_cadre"
+          "text": "Je préfère ne pas répondre",
+          "value": "anonymat"
         }
       ],
-      "tags": ["moral", "decision"],
-      "analysis": "Mesure l’utilitarisme vs. la déontologie, l’évitement de l’action, ou la pensée créative."
+      "tags": ["demographie", "age"],
+      "analysis": "Établit des tranches d'âge pour corréler la virginité avec la maturité démographique."
     },
     {
       "id": 2,
-      "question": "Vous avez un week-end de libre. Vous préférez :",
+      "question": "Êtes-vous actuellement en couple ou en relation sérieuse ?",
       "options": [
         {
-          "text": "Passer du temps avec des amis/proches (énergie sociale)",
-          "value": "extroversion"
+          "text": "Oui, depuis plus d'un an",
+          "value": "couple_stable"
         },
         {
-          "text": "Rester seul(e) pour vous recharger (énergie solitaire)",
-          "value": "introversion"
+          "text": "Oui, mais c'est récent (moins d'un an)",
+          "value": "couple_nouveau"
         },
         {
-          "text": "Un mix : peu de social mais avec des personnes choisies",
-          "value": "ambiversion"
+          "text": "Non, célibataire par choix",
+          "value": "celibataire_choix"
         },
         {
-          "text": "Cela dépend de mon humeur (instabilité décisionnelle)",
-          "value": "flexibilite"
+          "text": "Non, à la recherche d'une relation",
+          "value": "celibataire_recherche"
         },
         {
-          "text": "Je planifie une activité solo productive (ex: lecture, sport)",
-          "value": "autonomie"
+          "text": "Je préfère ne pas répondre",
+          "value": "anonymat"
         }
       ],
-      "tags": ["personnalite", "social"],
-      "analysis": "Introversion/extroversion, flexibilité cognitive, besoin de contrôle."
+      "tags": ["relation", "statut"],
+      "analysis": "Mesure l'impact des relations sur les expériences intimes et les pressions relationnelles."
     },
     {
       "id": 3,
-      "question": "On vous propose un pari : 50% de chance de gagner 1000$, 50% de perdre 500$. Vous :",
+      "question": "Avez-vous déjà eu une expérience sexuelle complète ?",
       "options": [
         {
-          "text": "Acceptez sans hésiter (appétence pour le risque)",
-          "value": "risque"
+          "text": "Non, je suis encore vierge",
+          "value": "vierge"
         },
         {
-          "text": "Refusez, la perte potentielle vous stresse (aversion au risque)",
-          "value": "prudence"
+          "text": "Oui, mais une seule fois",
+          "value": "experience_limitee"
         },
         {
-          "text": "Vous calculez l’espérance de gain (500$ - 250$ = +250$, donc oui)",
-          "value": "rationnel"
+          "text": "Oui, plusieurs fois",
+          "value": "experience_multiples"
         },
         {
-          "text": "Vous acceptez seulement si vous pouvez vous permettre de perdre",
-          "value": "conditionnel"
+          "text": "Je préfère ne pas répondre",
+          "value": "anonymat"
         },
         {
-          "text": "Vous demandez plus d’informations (besoin de contrôle)",
-          "value": "controle"
+          "text": "C'est une question trop personnelle",
+          "value": "rejet"
         }
       ],
-      "tags": ["risque", "decision"],
-      "analysis": "Biais cognitifs, calcul rationnel vs. émotionnel."
+      "tags": ["experience", "sexualite"],
+      "analysis": "Identifie directement les profils de virginité pour analyser les taux par groupe démographique."
     },
     {
       "id": 4,
-      "question": "Un collègue semble contrarié mais dit 'ça va'. Vous :",
+      "question": "Si vous êtes vierge, quelle est la principale raison ?",
       "options": [
         {
-          "text": "Insistez pour qu’il s’ouvre (empathie active)",
-          "value": "empathie_active"
+          "text": "Choix personnel (attente du bon moment)",
+          "value": "choix_personnel"
         },
         {
-          "text": "Respectez son silence mais montrez votre disponibilité",
-          "value": "empathie_passive"
+          "text": "Valeurs religieuses ou morales",
+          "value": "valeurs_religieuses"
         },
         {
-          "text": "L’ignorez, s’il voulait parler, il le dirait (littéralisme)",
-          "value": "neutralite"
+          "text": "Manque d'opportunités ou de partenaires",
+          "value": "manque_opportunites"
         },
         {
-          "text": "Agissez indirectement (ex: lui offrir un café)",
-          "value": "action_indirecte"
+          "text": "Peur des conséquences (santé, grossesse)",
+          "value": "peur_consequences"
         },
         {
-          "text": "Vous sentez mal à l’aise et évitez la situation",
-          "value": "evitement"
+          "text": "Pas applicable / Je ne suis pas vierge",
+          "value": "non_applicable"
         }
       ],
-      "tags": ["empathie", "social"],
-      "analysis": "Empathie, théorie de l’esprit, gestion de l’inconfort."
+      "tags": ["raisons", "motivations"],
+      "analysis": "Explore les barrières culturelles, personnelles ou pratiques à Kinshasa pour des insights sur les influences sociétales."
     },
     {
       "id": 5,
-      "question": "Vous recevez 1000$. Vous préférez :",
+      "question": "Dans Kinshasa, pensez-vous que la plupart des gens de votre âge ont déjà eu des relations sexuelles ?",
       "options": [
         {
-          "text": "Les dépenser maintenant pour un plaisir immédiat",
-          "value": "instantane"
+          "text": "Oui, la majorité l'a fait",
+          "value": "perception_majoritaire"
         },
         {
-          "text": "Les économiser pour un projet futur (retard de gratification)",
-          "value": "futur"
+          "text": "Non, beaucoup attendent le mariage",
+          "value": "perception_conservatrice"
         },
         {
-          "text": "En dépenser une partie et investir le reste",
-          "value": "mixte"
+          "text": "Ça dépend du quartier (ex: centre-ville vs. périphérie)",
+          "value": "perception_contextuelle"
         },
-        { "text": "Les donner à une cause (altruisme)", "value": "altruisme" },
         {
-          "text": "Attendre de voir un besoin précis (évitement de décision)",
-          "value": "attente"
+          "text": "Je n'en ai aucune idée",
+          "value": "incertitude"
+        },
+        {
+          "text": "C'est tabou, on n'en parle pas",
+          "value": "tabou"
         }
       ],
-      "tags": ["argent", "decision"],
-      "analysis": "Patience, impulsivité, altruisme, peur de l’engagement."
+      "tags": ["perception", "social"],
+      "analysis": "Évalue les normes perçues et les stéréotypes locaux pour corréler avec les réalités personnelles."
     },
     {
       "id": 6,
-      "question": "Un ami réussit mieux que vous dans un domaine important pour vous. Vous :",
+      "question": "Avez-vous déjà ressenti une pression pour avoir une première expérience sexuelle ?",
       "options": [
         {
-          "text": "Le félicitez sincèrement (joie authentique)",
-          "value": "joie_authentique"
+          "text": "Oui, de la part d'amis ou du cercle social",
+          "value": "pression_sociale"
         },
         {
-          "text": "Vous comparez et vous sentez inférieur(e) (jalousie)",
-          "value": "jalousie"
+          "text": "Oui, de la part d'un partenaire ou d'une relation",
+          "value": "pression_relationnelle"
         },
         {
-          "text": "Vous motivez pour progresser (compétition saine)",
-          "value": "motivation"
+          "text": "Non, je n'ai pas ressenti de pression",
+          "value": "aucune_pression"
         },
         {
-          "text": "Vous dites 'Tant mieux pour lui' mais intérieurement frustré(e)",
-          "value": "frustration_cachee"
+          "text": "Oui, mais de la famille ou de la société en général",
+          "value": "pression_familiale"
         },
         {
-          "text": "Vous remettez en question votre propre valeur",
-          "value": "doute_soi"
+          "text": "Je préfère ne pas répondre",
+          "value": "anonymat"
         }
       ],
-      "tags": ["social", "emotion"],
-      "analysis": "Estime de soi, gestion de la jalousie, mindset fixe vs. growth."
+      "tags": ["pression", "influence"],
+      "analysis": "Analyse les sources de pression pour identifier les dynamiques sociales et de genre à Kinshasa."
     },
     {
       "id": 7,
-      "question": "'Un arbre tombe dans une forêt sans témoin. Fait-il du bruit ?'",
+      "question": "Quel rôle joue la religion dans vos choix intimes ?",
       "options": [
         {
-          "text": "Oui, le bruit est physique, pas besoin d’auditeur (réalisme)",
-          "value": "realisme"
+          "text": "Très important, je suis les enseignements strictement",
+          "value": "influence_forte"
         },
         {
-          "text": "Non, le son nécessite une perception (idéalisme)",
-          "value": "idealisme"
+          "text": "Modéré, ça guide mais ne dicte pas tout",
+          "value": "influence_moderee"
         },
         {
-          "text": "La question est un piège sémantique (rejet du cadre)",
-          "value": "rejet_cadre"
+          "text": "Peu ou pas d'influence",
+          "value": "influence_faible"
         },
         {
-          "text": "Je n’ai pas d’avis, c’est trop théorique",
-          "value": "neutralite"
+          "text": "Je ne suis pas religieux/religieuse",
+          "value": "non_religieux"
         },
         {
-          "text": "Cela dépend de la définition de 'bruit'",
-          "value": "relativisme"
+          "text": "Ça dépend des situations",
+          "value": "contextuel"
         }
       ],
-      "tags": ["philosophie", "abstraction"],
-      "analysis": "Pensée concrète vs. abstraite, tolérance à l’ambiguïté."
+      "tags": ["religion", "valeurs"],
+      "analysis": "Mesure l'impact culturel et religieux dominant à Kinshasa sur les décisions personnelles."
     },
     {
       "id": 8,
-      "question": "Une IA doit choisir entre sauver un enfant ou 3 adultes. Vous :",
+      "question": "Si vous deviez attendre le mariage pour une première expérience, est-ce votre plan ?",
       "options": [
         {
-          "text": "Programmez l’IA pour minimiser les morts (utilitarisme)",
-          "value": "utilitarisme"
+          "text": "Oui, c'est une priorité absolue",
+          "value": "attente_mariage"
         },
         {
-          "text": "Interdisez ce type de choix à l’IA (refus de délégation morale)",
-          "value": "controle_ethique"
+          "text": "Peut-être, si les circonstances le permettent",
+          "value": "attente_conditionnelle"
         },
         {
-          "text": "L’IA doit prioriser les enfants (valeur affective)",
-          "value": "biais_affectif"
+          "text": "Non, ce n'est pas réaliste pour moi",
+          "value": "rejet_attente"
         },
         {
-          "text": "Vous demandez l’avis d’un comité éthique (externalisation)",
-          "value": "externalisation"
+          "text": "Ça dépend de mon partenaire",
+          "value": "dependance_partenaire"
         },
         {
-          "text": "C’est impossible, l’IA ne devrait pas conduire (technophobie)",
-          "value": "rejet_tech"
+          "text": "Je n'y ai pas réfléchi",
+          "value": "indecision"
         }
       ],
-      "tags": ["ethique", "technologie"],
-      "analysis": "Confiance dans la tech, biais humains projetés sur les machines."
+      "tags": ["attente", "engagement"],
+      "analysis": "Évalue l'adhésion aux normes traditionnelles vs. modernité pour des tendances générationnelles."
     },
     {
       "id": 9,
-      "question": "Un ami répond sèchement à un message. Vous pensez :",
+      "question": "Les médias ou les réseaux sociaux influencent-ils vos idées sur la virginité ?",
       "options": [
         {
-          "text": "Il est fâché contre moi (internalisation)",
-          "value": "internalisation"
+          "text": "Oui, ils normalisent les expériences précoces",
+          "value": "influence_modernisante"
         },
         {
-          "text": "Il a sûrement eu une mauvaise journée (externalisation)",
-          "value": "externalisation"
+          "text": "Oui, mais ils renforcent les valeurs traditionnelles",
+          "value": "influence_conservatrice"
         },
         {
-          "text": "Je relis mon message pour voir si j’ai été maladroit (auto-analyse)",
-          "value": "auto_analyse"
+          "text": "Non, je m'en méfie ou les ignore",
+          "value": "rejet_medias"
         },
         {
-          "text": "Je lui demande directement s’il va bien (communication assertive)",
-          "value": "assertivite"
+          "text": "Parfois, pour des infos sur la santé sexuelle",
+          "value": "influence_educationnelle"
         },
         {
-          "text": "J’ignore ça, trop de variables pour spéculer (évitement)",
-          "value": "evitement"
+          "text": "Je n'utilise pas beaucoup les réseaux",
+          "value": "faible_exposition"
         }
       ],
-      "tags": ["cognition_sociale", "communication"],
-      "analysis": "Attribution causale, anxiété sociale, besoin de clarté."
+      "tags": ["medias", "influence_sociale"],
+      "analysis": "Examine l'exposition aux influences globales vs. locales pour analyser les shifts culturels."
     },
     {
       "id": 10,
-      "question": "Dans un groupe, tout le monde rit d’une blague que vous ne trouvez pas drôle. Vous :",
+      "question": "Dans votre entourage à Kinshasa, parlez-vous ouvertement de sexualité ?",
       "options": [
         {
-          "text": "Vous forcez à rire pour vous intégrer (conformité)",
-          "value": "conformite"
+          "text": "Oui, avec des amis proches",
+          "value": "ouverture_amis"
         },
         {
-          "text": "Restez neutre, sans mentir (authenticité modérée)",
-          "value": "authenticite"
+          "text": "Non, c'est un sujet tabou",
+          "value": "tabou"
         },
         {
-          "text": "Dites ouvertement que vous ne comprenez pas (non-conformité)",
-          "value": "non_conformite"
+          "text": "Seulement en cas de besoin (conseils santé)",
+          "value": "ouverture_limitee"
         },
         {
-          "text": "Attendez de voir si d’autres osent ne pas rire (recherche d’alliés)",
-          "value": "recherche_allies"
+          "text": "Oui, dans des groupes mixtes (hommes/femmes)",
+          "value": "ouverture_groupe"
         },
         {
-          "text": "Analysez pourquoi les autres rient (curiosité sociale)",
-          "value": "curiosite"
+          "text": "Jamais, par respect pour les traditions",
+          "value": "fermeture_traditionnelle"
         }
       ],
-      "tags": ["cognition_sociale", "groupe"],
-      "analysis": "Pression sociale, autonomie cognitive, sensibilité au rejet."
+      "tags": ["communication", "social"],
+      "analysis": "Mesure le niveau de dialogue ouvert pour corréler avec les taux de virginité et l'éducation sexuelle."
     },
     {
       "id": 11,
-      "question": "Un inconnu pleure dans les transports. Vous :",
+      "question": "Votre niveau d'éducation influence-t-il vos choix intimes ?",
       "options": [
         {
-          "text": "Lui demandez s’il a besoin d’aide (empathie active)",
-          "value": "empathie_active"
+          "text": "Oui, l'éducation m'a rendu plus prudent(e)",
+          "value": "influence_prudence"
         },
         {
-          "text": "Échangez un regard compatissant mais n’intervenez pas (empathie passive)",
-          "value": "empathie_passive"
+          "text": "Oui, elle m'a ouvert à plus de liberté",
+          "value": "influence_liberte"
         },
         {
-          "text": "Vous éloignez, mal à l’aise (évitement émotionnel)",
-          "value": "evitement"
+          "text": "Non, ça n'a pas d'impact direct",
+          "value": "aucun_impact"
         },
         {
-          "text": "Vous dites 'Ça va aller' sans engagement (réconfort superficiel)",
-          "value": "reconfort_superficiel"
+          "text": "Je n'ai pas beaucoup d'éducation formelle",
+          "value": "faible_education"
         },
         {
-          "text": "Vous imaginez ce qui a pu lui arriver (mentalisation)",
-          "value": "mentalisation"
+          "text": "C'est surtout l'expérience qui compte",
+          "value": "priorite_experience"
         }
       ],
-      "tags": ["cognition_sociale", "empathie"],
-      "analysis": "Empathie spontanée vs. inhibition sociale, tolérance aux émotions d’autrui."
+      "tags": ["education", "influence"],
+      "analysis": "Analyse les corrélations entre éducation, urbanité à Kinshasa et attitudes sexuelles."
     },
     {
       "id": 12,
-      "question": "Un collègue que vous n’aimez pas reçoit une promotion. Vous :",
+      "question": "Pensez-vous que la virginité est plus valorisée chez les femmes que chez les hommes à Kinshasa ?",
       "options": [
         {
-          "text": "Vous dites qu’il la mérite (objectivité)",
-          "value": "objectivite"
+          "text": "Oui, il y a un double standard clair",
+          "value": "double_standard"
         },
         {
-          "text": "Vous questionnez secrètement la décision (biais de confirmation)",
-          "value": "biais_confirmation"
+          "text": "Non, c'est égal pour tous",
+          "value": "egalite"
         },
         {
-          "text": "Vous vous comparez en cherchant des injustices (ressentiment)",
-          "value": "ressentiment"
+          "text": "Ça dépend de la communauté ou du quartier",
+          "value": "contextuel"
         },
         {
-          "text": "Vous félicitez poliment mais sans conviction (hypocrisie sociale)",
-          "value": "hypocrisie"
+          "text": "Je n'ai pas d'opinion formée",
+          "value": "incertitude"
         },
         {
-          "text": "Vous demandez des feedbacks pour progresser (auto-amélioration)",
-          "value": "auto_amelioration"
+          "text": "Ça change avec la génération jeune",
+          "value": "evolution"
         }
       ],
-      "tags": ["cognition_sociale", "biais"],
-      "analysis": "Biais de partialité, gestion de l’envie, rationalisation."
+      "tags": ["genre", "culture"],
+      "analysis": "Identifie les biais de genre pour des conclusions sur l'égalité et les pressions différentielles."
     }
   ],
   "config": {

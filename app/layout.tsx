@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "PSYCHO TEST",
-  description: "Est-ce que tu penses comme tout le monde ?",
+  description: "Qui est encore vierge à Kinshasa ?",
 };
 
 export default function RootLayout({
